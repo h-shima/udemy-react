@@ -1,33 +1,20 @@
 import React, { Component } from 'react';
 
-import Greeting from './greeting';
+import SearchForm from './SearchForm';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "John",
+
     };
-  }
-
-  handleNameChange(name) {
-    this.setState({ name: name });
-  }
-
-  handleBobClicked() {
-    this.setState({ name: 'Bob' });
   }
 
   render() {
     return (
       <div>
-        <input
-         type="text"
-         value={this.state.name}
-         onChange={(e) => this.handleNameChange(e.target.value)}
-      />
-        <button onClick={() => this.handleBobClicked()}>I am Bob</button>
-        <Greeting name={this.state.name} />
+        <h1>緯度経度検索</h1>
+        <SearchForm />
       </div>
     );
   }
